@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Time Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Download Time Calculator</h1>
+        <form id="calculator-form">
+            <div class="input-group">
+                <label for="file-size">File Size</label>
+                <div class="input-with-unit">
+                    <input type="number" id="file-size" placeholder="e.g., 100" required>
+                    <select id="file-size-unit">
+                        <option value="MB">MB</option>
+                        <option value="GB">GB</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="internet-speed">Internet Speed</label>
+                <div class="input-with-unit">
+                    <input type="number" id="internet-speed" placeholder="e.g., 50" required>
+                    <select id="internet-speed-unit">
+                        <option value="Mbps">Mbps</option>
+                        <option value="MB/s">MB/s</option>
+                        <option value="Gbps">Gbps</option>
+                        <option value="GB/s">GB/s</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="result-container" class="hidden">
+            <p>Estimated Download Time:</p>
+            <h2 id="result-text"></h2>
+        </div>
+        <div id="error-message" class="hidden"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
