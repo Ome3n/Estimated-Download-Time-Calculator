@@ -10,28 +10,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Omen Tools</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="active">Smart Download Calculator</a></li>
+                <li class="nav-item"><a href="converter.html">Speed Unit Converter</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="calculator-container">
-        <h1>Download Time Calculator</h1>
+        <h1>Smart Download Calculator</h1>
+        <div class="input-group">
+            <label for="calculation-mode">I want to calculate:</label>
+            <select id="calculation-mode">
+                <option value="time">Download Time</option>
+                <option value="size">File Size</option>
+                <option value="speed">Internet Speed</option>
+            </select>
+        </div>
         <form id="calculator-form">
-            <div class="input-group">
+            <div class="input-group" id="file-size-group">
                 <label for="file-size">File Size</label>
                 <div class="input-with-unit">
-                    <input type="number" id="file-size" placeholder="e.g., 100" required>
+                    <input type="number" id="file-size" placeholder="e.g., 1000">
                     <select id="file-size-unit">
                         <option value="MB">MB</option>
                         <option value="GB">GB</option>
                     </select>
                 </div>
             </div>
-            <div class="input-group">
+            <div class="input-group" id="internet-speed-group">
                 <label for="internet-speed">Internet Speed</label>
                 <div class="input-with-unit">
-                    <input type="number" id="internet-speed" placeholder="e.g., 50" required>
+                    <input type="number" id="internet-speed" placeholder="e.g., 100">
                     <select id="internet-speed-unit">
                         <option value="Mbps">Mbps</option>
                         <option value="MB/s">MB/s</option>
                         <option value="Gbps">Gbps</option>
                         <option value="GB/s">GB/s</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group" id="download-time-group" style="display: none;">
+                <label for="download-time">Download Time</label>
+                <div class="input-with-unit">
+                    <input type="number" id="download-time" placeholder="e.g., 5">
+                    <select id="download-time-unit">
+                        <option value="seconds">Seconds</option>
+                        <option value="minutes">Minutes</option>
                     </select>
                 </div>
             </div>
